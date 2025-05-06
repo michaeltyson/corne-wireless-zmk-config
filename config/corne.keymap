@@ -217,10 +217,10 @@ combos {
 
         default_layer {
             bindings = <
-&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P        &kp Y           &kp F            &kp G        &kp C         &kp R        &kp L          &kp BSPC
-&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U  &kp I           &kp D            &hmr RGUI H  &hmr RCTRL T  &hmr RALT N  &hmr RSHIFT S  &mt LA(LS(MINUS)) MINUS
-&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K        &kp X           &kp B            &kp M        &kp W         &kp V        &kp Z          &kp SLASH
-                                      &kp LGUI             &lt 1 ENTER  &lt 2 ESCAPE    &lt 4 BACKSPACE  &lt 3 SPACE  &kp RALT
+&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P        &kp Y           &kp F            &kp G        &kp C            &kp R        &kp L          &kp NON_US_BACKSLASH
+&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U  &kp I           &kp D            &hmr RGUI H  &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &mt LA(LS(MINUS)) MINUS
+&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K        &kp X           &kp B            &kp M        &kp W            &kp V        &kp Z          &kp SLASH
+                                      &kp LGUI             &lt 1 ENTER  &lt 2 ESCAPE    &lt 4 BACKSPACE  &lt 3 SPACE  &kp RIGHT_SHIFT
             >;
         };
 

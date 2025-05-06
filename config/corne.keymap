@@ -40,6 +40,60 @@
     };
 };
 
+combos {
+    compatible = "zmk,combos";
+
+    number_1 {
+        bindings = <&kp NUMBER_1>;
+        key-positions = <1 13>; // top row index finger + home index
+    };
+
+    number_2 {
+        bindings = <&kp NUMBER_2>;
+        key-positions = <2 14>; // top row middle + home middle
+    };
+
+    number_3 {
+        bindings = <&kp NUMBER_3>;
+        key-positions = <3 15>; // top row ring + home ring
+    };
+
+    number_4 {
+        bindings = <&kp NUMBER_4>;
+        key-positions = <4 16>; // top row pinky + home pinky
+    };
+
+    number_5 {
+        bindings = <&kp N5>;
+        key-positions = <17 5>; // top row outer + home pinky (other side)
+    };
+
+    number_6 {
+        bindings = <&kp NUMBER_6>;
+        key-positions = <6 18>; // top row pinky + home pinky (right side)
+    };
+
+    number_7 {
+        bindings = <&kp N7>;
+        key-positions = <7 19>; // top row ring + home ring
+    };
+
+    number_8 {
+        bindings = <&kp N8>;
+        key-positions = <20 8>; // top row middle + home middle
+    };
+
+    number_9 {
+        bindings = <&kp N9>;
+        key-positions = <9 21>; // top row index + home index
+    };
+
+    number_0 {
+        bindings = <&kp N0>;
+        key-positions = <10 22>; // top row outer + home index (mirrored)
+    };
+};
+
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";

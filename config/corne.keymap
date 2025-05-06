@@ -170,6 +170,36 @@ combos {
         key-positions = <23 35>;
         layers = <1>;
     };
+
+    combo_vi_prev {
+        bindings = <&kp HASH>;
+        key-positions = <6 7>;
+        layers = <4>;
+    };
+
+    combo_vi_next {
+        bindings = <&kp STAR>;
+        key-positions = <18 19>;
+        layers = <4>;
+    };
+
+    combo_vi_start {
+        bindings = <&kp CARET>;
+        key-positions = <18 6>;
+        layers = <4>;
+    };
+
+    combo_vi_end {
+        bindings = <&kp DOLLAR>;
+        key-positions = <7 19>;
+        layers = <4>;
+    };
+
+    combo_vi_match {
+        bindings = <&kp PERCENT>;
+        key-positions = <31 30>;
+        layers = <4>;
+    };
 };
 
 / {

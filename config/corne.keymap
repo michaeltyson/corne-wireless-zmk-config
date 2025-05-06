@@ -92,6 +92,11 @@ combos {
         bindings = <&kp N0>;
         key-positions = <10 22>; // top row outer + home index (mirrored)
     };
+
+    equals {
+        bindings = <&kp EQUAL>;
+        key-positions = <11 23>;
+    };
 };
 
 / {
@@ -116,7 +121,7 @@ combos {
             //                     +-----------------+        +-----------------+
 
             bindings = <
-&gresc     &kp SQT       &kp COMMA    &kp DOT              &kp P        &kp Y        &kp F          &kp G        &kp C         &kp R        &kp L          &kp BSPC
+&gresc     &kp SQT       &kp COMMA    &kp DOT              &kp P        &kp Y        &kp F          &kp G        &kp C         &kp R        &kp L          &mt LC(SPACE) NON_US_BACKSLASH
 &kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U  &kp I        &kp D          &hmr RGUI H  &hmr RCTRL T  &hmr RALT N  &hmr RSHIFT S  &kp MINUS
 &kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K        &kp X        &kp B          &kp M        &kp W         &kp V        &kp Z          &kp SLASH
                                       &kp LGUI             &kp ENTER    &kp SPACE    &kp BACKSPACE  &kp SPACE    &kp RALT

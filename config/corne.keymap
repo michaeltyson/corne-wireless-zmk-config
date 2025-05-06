@@ -18,6 +18,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <6 7 9 10 11 18 19 21 22 23 30 31 32 33 34 35 39 40 41 8 20>; // right side home row key positions
             hold-trigger-on-release;
         };
@@ -30,6 +31,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>; // left side home row key positions
             hold-trigger-on-release;
         };
@@ -212,10 +214,10 @@ combos {
 
         default_layer {
             bindings = <
-&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P        &kp Y           &kp F            &kp G        &kp C            &kp R        &kp L          &kp NON_US_BACKSLASH
-&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U  &kp I           &kp D            &hmr RGUI H  &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &mt LA(LS(MINUS)) MINUS
-&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K        &kp X           &kp B            &kp M        &kp W            &kp V        &kp Z          &kp SLASH
-                                      &kp LGUI             &lt 1 ENTER  &lt 2 ESCAPE    &lt 4 BACKSPACE  &lt 3 SPACE  &kp RIGHT_SHIFT
+&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P        &kp Y           &kp F                    &kp G        &kp C            &kp R        &kp L          &mt LC(SPACE) NON_US_BACKSLASH
+&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U  &kp I           &mt LS(LA(LC(LG(T)))) D  &hmr RGUI H  &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &mt LA(LS(MINUS)) MINUS
+&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K        &kp X           &kp B                    &kp M        &kp W            &kp V        &kp Z          &mt LG(NON_US_BACKSLASH) SLASH
+                                      &kp LGUI             &lt 1 ENTER  &lt 2 ESCAPE    &lt 4 BACKSPACE          &lt 3 SPACE  &kp RIGHT_SHIFT
             >;
         };
 
@@ -227,13 +229,13 @@ combos {
                                                          &trans      &trans            &trans               &trans  &trans  &trans
             >;
         };
-        
+
         symbols {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5     &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTERISK   &kp CARET         &kp DOLLAR
-&trans  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp F10    &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp AT
-&trans  &trans        &trans        &trans        &trans        &trans     &kp MINUS      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EQUAL      &kp EXCL          &kp HASH
-                                    &trans        &trans        &trans     &trans         &trans                &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTERISK   &kp CARET         &kp DOLLAR
+&trans  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0        &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp AT
+&trans  &kp PLUS      &kp MINUS     &kp ASTERISK  &kp SLASH     &kp PERIOD    &kp MINUS      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EQUAL      &kp EXCL          &kp HASH
+                                    &trans        &trans        &trans        &kp DELETE     &trans                &trans
             >;
         };
 

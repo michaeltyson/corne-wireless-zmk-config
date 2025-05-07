@@ -43,56 +43,67 @@
         combo_num1 {
             bindings = <&kp NUMBER_1>;
             key-positions = <1 13>; // top row index finger + home index
+            layers = <0>;
         };
 
         combo_num2 {
             bindings = <&kp NUMBER_2>;
             key-positions = <2 14>; // top row middle + home middle
+            layers = <0>;
         };
 
         combo_num3 {
             bindings = <&kp NUMBER_3>;
             key-positions = <3 15>; // top row ring + home ring
+            layers = <0>;
         };
 
         combo_num4 {
             bindings = <&kp NUMBER_4>;
             key-positions = <4 16>; // top row pinky + home pinky
+            layers = <0>;
         };
 
         combo_num5 {
             bindings = <&kp N5>;
             key-positions = <17 5>; // top row outer + home pinky (other side)
+            layers = <0>;
         };
 
         combo_num6 {
             bindings = <&kp NUMBER_6>;
             key-positions = <6 18>; // top row pinky + home pinky (right side)
+            layers = <0>;
         };
 
         combo_num7 {
             bindings = <&kp N7>;
             key-positions = <7 19>; // top row ring + home ring
+            layers = <0>;
         };
 
         combo_num8 {
             bindings = <&kp N8>;
             key-positions = <20 8>; // top row middle + home middle
+            layers = <0>;
         };
 
         combo_num9 {
             bindings = <&kp N9>;
             key-positions = <9 21>; // top row index + home index
+            layers = <0>;
         };
 
         combo_num0 {
             bindings = <&kp N0>;
             key-positions = <10 22>; // top row outer + home index (mirrored)
+            layers = <0>;
         };
 
         combo_equals {
             bindings = <&kp EQUAL>;
             key-positions = <11 23>;
+            layers = <0>;
         };
 
         combo_f1 {
@@ -210,7 +221,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        main {
             bindings = <
 &kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P        &kp Y           &kp F                    &kp G        &kp C            &kp R        &kp L          &mt LC(SPACE) NON_US_BACKSLASH
 &kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U  &kp I           &mt LS(LA(LC(LG(T)))) D  &hmr RGUI H  &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &mt LA(LS(MINUS)) MINUS
@@ -246,7 +257,7 @@
             >;
         };
 
-        navigation {
+        nav {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &mt LG(UP_ARROW) PAGE_UP      &kp LG(LEFT)        &kp UP_ARROW                    &kp LG(RIGHT)  &mt ENTER LC(LG(LEFT_ARROW))  &mt ESCAPE LC(LG(RIGHT))
 &trans  &trans  &trans  &trans  &trans  &trans    &mt LG(DOWN_ARROW) PAGE_DOWN  &kp LEFT            &kp DOWN_ARROW                  &kp RIGHT      &mt LC(LG(C)) LC(NUMBER_6)    &mt LC(LG(Y)) F6

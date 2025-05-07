@@ -39,158 +39,158 @@
 
     combos {
         compatible = "zmk,combos";
-    
+
         combo_num1 {
             bindings = <&kp NUMBER_1>;
             key-positions = <1 13>; // top row index finger + home index
         };
-    
+
         combo_num2 {
             bindings = <&kp NUMBER_2>;
             key-positions = <2 14>; // top row middle + home middle
         };
-    
+
         combo_num3 {
             bindings = <&kp NUMBER_3>;
             key-positions = <3 15>; // top row ring + home ring
         };
-    
+
         combo_num4 {
             bindings = <&kp NUMBER_4>;
             key-positions = <4 16>; // top row pinky + home pinky
         };
-    
+
         combo_num5 {
             bindings = <&kp N5>;
             key-positions = <17 5>; // top row outer + home pinky (other side)
         };
-    
+
         combo_num6 {
             bindings = <&kp NUMBER_6>;
             key-positions = <6 18>; // top row pinky + home pinky (right side)
         };
-    
+
         combo_num7 {
             bindings = <&kp N7>;
             key-positions = <7 19>; // top row ring + home ring
         };
-    
+
         combo_num8 {
             bindings = <&kp N8>;
             key-positions = <20 8>; // top row middle + home middle
         };
-    
+
         combo_num9 {
             bindings = <&kp N9>;
             key-positions = <9 21>; // top row index + home index
         };
-    
+
         combo_num0 {
             bindings = <&kp N0>;
             key-positions = <10 22>; // top row outer + home index (mirrored)
         };
-    
+
         combo_equals {
             bindings = <&kp EQUAL>;
             key-positions = <11 23>;
         };
-    
+
         combo_f1 {
             bindings = <&kp F1>;
             key-positions = <1 13>;
             layers = <1>;
         };
-    
+
         combo_f2 {
             bindings = <&kp F2>;
             key-positions = <2 14>;
             layers = <1>;
         };
-    
+
         combo_f3 {
             bindings = <&kp F3>;
             key-positions = <3 15>;
             layers = <1>;
         };
-    
+
         combo_f4 {
             bindings = <&kp F4>;
             key-positions = <4 16>;
             layers = <1>;
         };
-    
+
         combo_f5 {
             bindings = <&kp F5>;
             key-positions = <17 5>;
             layers = <1>;
         };
-    
+
         combo_f6 {
             bindings = <&kp F6>;
             key-positions = <6 18>;
             layers = <1>;
         };
-    
+
         combo_f7 {
             bindings = <&kp F7>;
             key-positions = <7 19>;
             layers = <1>;
         };
-    
+
         combo_f8 {
             bindings = <&kp F8>;
             key-positions = <20 8>;
             layers = <1>;
         };
-    
+
         combo_f9 {
             bindings = <&kp F9>;
             key-positions = <9 21>;
             layers = <1>;
         };
-    
+
         combo_f10 {
             bindings = <&kp F10>;
             key-positions = <10 22>;
             layers = <1>;
         };
-    
+
         combo_f11 {
             bindings = <&kp F11>;
             key-positions = <11 23>;
             layers = <1>;
         };
-    
+
         combo_f12 {
             bindings = <&kp F12>;
             key-positions = <23 35>;
             layers = <1>;
         };
-    
+
         combo_vi_prev {
             bindings = <&kp HASH>;
             key-positions = <6 7>;
             layers = <4>;
         };
-    
+
         combo_vi_next {
             bindings = <&kp STAR>;
             key-positions = <18 19>;
             layers = <4>;
         };
-    
+
         combo_vi_start {
             bindings = <&kp CARET>;
-            key-positions = <18 6>;
+            key-positions = <19 7>;
             layers = <4>;
         };
-    
+
         combo_vi_end {
             bindings = <&kp DOLLAR>;
-            key-positions = <7 19>;
+            key-positions = <9 21>;
             layers = <4>;
         };
-    
+
         combo_vi_match {
             bindings = <&kp PERCENT>;
             key-positions = <31 30>;

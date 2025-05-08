@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
 
 #include <behaviors.dtsi>
@@ -266,9 +266,9 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mt ENTER LC(LEFT)  &mt ESCAPE LC(RIGHT)
-&trans  &trans  &trans  &trans  &mkp MB1  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LGUI            &kp LC(UP_ARROW)
-&trans  &trans  &trans  &trans  &trans    &trans    &none           &none           &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp LA(LCMD)        &kp LG(F3)
+&trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &mt ENTER LC(LEFT)  &mt ESCAPE LC(RIGHT)
+&trans  &trans  &trans  &trans  &mkp MB1  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LGUI            &kp LC(UP_ARROW)
+&trans  &trans  &trans  &trans  &trans    &trans    &none           &none           &msc SCRL_RIGHT  &msc SCRL_LEFT   &kp LA(LCMD)        &kp LG(F3)
                         &trans  &trans    &trans    &trans          &trans          &trans
             >;
         };

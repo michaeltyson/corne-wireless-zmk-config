@@ -3,13 +3,12 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -38,6 +37,27 @@
 
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>; // left side home row key positions
             hold-trigger-on-release;
+        };
+
+        lrep: lrep {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Layer/Repeat";
+            bindings = <&lt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <150>;
+        };
+
+        hs: hs {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold Slow";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <150>;
         };
     };
 
@@ -227,10 +247,10 @@
 
         main {
             bindings = <
-&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P        &kp Y           &kp F                    &kp G        &kp C            &kp R        &kp L          &mt LC(SPACE) NON_US_BACKSLASH
-&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U  &kp I           &mt LS(LA(LC(LG(T)))) D  &hmr RGUI H  &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &mt LA(LS(MINUS)) MINUS
-&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K        &kp X           &kp B                    &kp M        &kp W            &kp V        &kp Z          &mt LG(NON_US_BACKSLASH) SLASH
-                                      &kp LGUI             &lt 2 ESCAPE  &lt 1 ENTER    &lt 3 SPACE          &lt 4 BACKSPACE  &kp RIGHT_SHIFT
+&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P         &kp Y            &kp F                    &kp G              &kp C            &kp R        &kp L          &hs LC(SPACE) BACKSLASH
+&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U   &kp I            &hs LS(LA(LC(LG(T)))) D  &hmr RGUI H        &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &hs LA(LS(MINUS)) MINUS
+&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K         &kp X            &kp B                    &kp M              &kp W            &kp V        &kp Z          &hs LG(BACKSLASH) SLASH
+                                      &kp LGUI             &lt 1 ESCAPE  &lrep 2 ENTER    &lrep 3 SPACE            &lrep 4 BACKSPACE  &kp RIGHT_SHIFT
             >;
         };
 
@@ -255,7 +275,7 @@
         mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mt ENTER LC(LEFT)  &mt ESCAPE LC(RIGHT)
-&trans  &trans  &trans  &trans  &mkp MB1  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &kp LGUI            &kp LC(UP_ARROW)
+&trans  &trans  &trans  &trans  &mkp MB1  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LGUI            &kp LC(UP_ARROW)
 &trans  &trans  &trans  &trans  &trans    &trans    &none           &none           &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp LA(LCMD)        &kp LG(F3)
                         &trans  &trans    &trans    &trans          &trans          &trans
             >;

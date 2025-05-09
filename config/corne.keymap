@@ -268,7 +268,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &mt ENTER LC(LEFT)  &mt ESCAPE LC(RIGHT)
 &trans  &trans  &trans  &trans  &mkp MB1  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LGUI            &kp LC(UP_ARROW)
-&trans  &trans  &trans  &trans  &trans    &trans    &tog 3          &none           &msc SCRL_RIGHT  &msc SCRL_LEFT   &kp LA(LCMD)        &kp LG(F3)
+&trans  &trans  &trans  &trans  &trans    &trans    &tog 6          &none           &msc SCRL_RIGHT  &msc SCRL_LEFT   &kp LA(LCMD)        &kp LG(F3)
                         &trans  &trans    &trans    &trans          &trans          &trans
             >;
         };
@@ -290,5 +290,16 @@
                                     &trans        &trans        &trans        &trans  &trans    &trans
             >;
         };
+
+
+        mouse_hold {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &mt ENTER LC(LEFT)  &mt ESCAPE LC(RIGHT)
+&trans  &trans  &trans  &trans  &mkp MB1  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LGUI            &kp LC(UP_ARROW)
+&trans  &trans  &trans  &trans  &trans    &trans    &tog 6          &none           &msc SCRL_RIGHT  &msc SCRL_LEFT   &kp LA(LCMD)        &kp LG(F3)
+                        &trans  &trans    &trans    &mkp LCLK       &mkp RCLK       &trans
+            >;
+        };
+
     };
 };

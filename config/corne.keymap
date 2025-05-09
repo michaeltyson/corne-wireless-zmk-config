@@ -12,9 +12,15 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &lt { quick-tap-ms = <150>; };
+
 &mmv {
     time-to-max-speed-ms = <400>;
     acceleration-exponent = <1>;
+};
+
+&mt {
+    tapping-term-ms = <300>;
+    quick-tap-ms = <150>;
 };
 
 / {
@@ -43,17 +49,6 @@
 
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>; // left side home row key positions
             hold-trigger-on-release;
-        };
-
-        hs: hs {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Hold Slow";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <400>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <150>;
         };
     };
 
@@ -243,9 +238,9 @@
 
         main {
             bindings = <
-&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P         &kp Y          &kp F                    &kp G            &kp C            &kp R        &kp L          &hs LC(SPACE) BACKSLASH
-&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U   &kp I          &hs LS(LA(LC(LG(T)))) D  &hmr RGUI H      &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &hs LA(LS(MINUS)) MINUS
-&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K         &kp X          &kp B                    &kp M            &kp W            &kp V        &kp Z          &hs LG(BACKSLASH) SLASH
+&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P         &kp Y          &kp F                    &kp G            &kp C            &kp R        &kp L          &mt LC(SPACE) BACKSLASH
+&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U   &kp I          &mt LS(LA(LC(LG(T)))) D  &hmr RGUI H      &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &mt LA(LS(MINUS)) MINUS
+&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K         &kp X          &kp B                    &kp M            &kp W            &kp V        &kp Z          &mt LG(BACKSLASH) SLASH
                                       &kp LGUI             &lt 1 ESCAPE  &lt 2 ENTER    &lt 3 SPACE              &lt 4 BACKSPACE  &kp RIGHT_SHIFT
             >;
         };
@@ -261,9 +256,9 @@
 
         symbols {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTERISK   &kp CARET         &kp DOLLAR
-&trans  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0        &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp AT
-&trans  &kp PLUS      &kp MINUS     &kp ASTERISK  &kp SLASH     &kp PERIOD    &kp MINUS      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EQUAL      &kp EXCL          &kp HASH
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &mt PIPE AMPS  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTERISK   &kp CARET         &kp DOLLAR
+&trans  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0        &kp AT         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS
+&trans  &kp PLUS      &kp MINUS     &kp ASTERISK  &kp SLASH     &kp PERIOD    &kp EXCL       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EQUAL      &kp PLUS          &kp HASH
                                     &trans        &trans        &trans        &trans         &kp DELETE            &trans
             >;
         };
@@ -280,7 +275,7 @@
         nav {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &mt LG(UP_ARROW) PAGE_UP      &kp LG(LEFT)        &kp UP_ARROW                    &kp LG(RIGHT)  &mt ENTER LC(LG(LEFT_ARROW))  &mt ESCAPE LC(LG(RIGHT))
-&trans  &trans  &trans  &trans  &trans  &trans    &mt LG(DOWN_ARROW) PAGE_DOWN  &kp LEFT            &kp DOWN_ARROW                  &kp RIGHT      &mt LC(LG(C)) LC(NUMBER_6)    &mt LC(LG(Y)) F6
+&trans  &trans  &trans  &trans  &trans  &trans    &mt LG(DOWN_ARROW) PAGE_DOWN  &kp LEFT            &kp DOWN_ARROW                  &kp RIGHT      &mt LC(LG(Y)) LC(NUMBER_6)    &mt LC(LG(C)) F6
 &trans  &trans  &trans  &trans  &trans  &trans    &mt LA(LG(COMMA)) LC(GRAVE)   &kp LA(LEFT_ARROW)  &mt LC(LG(J)) LC(LG(UP_ARROW))  &kp LA(RIGHT)  &mt LG(LS(C)) LS(LG(O))       &mt F8 F7
                         &trans  &trans  &trans    &trans                        &trans              &trans
             >;

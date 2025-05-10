@@ -56,72 +56,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_num1 {
-            bindings = <&kp NUMBER_1>;
-            key-positions = <1 13>; // top row index finger + home index
-            layers = <0>;
-        };
-
-        combo_num2 {
-            bindings = <&kp NUMBER_2>;
-            key-positions = <2 14>; // top row middle + home middle
-            layers = <0>;
-        };
-
-        combo_num3 {
-            bindings = <&kp NUMBER_3>;
-            key-positions = <3 15>; // top row ring + home ring
-            layers = <0>;
-        };
-
-        combo_num4 {
-            bindings = <&kp NUMBER_4>;
-            key-positions = <4 16>; // top row pinky + home pinky
-            layers = <0>;
-        };
-
-        combo_num5 {
-            bindings = <&kp N5>;
-            key-positions = <17 5>; // top row outer + home pinky (other side)
-            layers = <0>;
-        };
-
-        combo_num6 {
-            bindings = <&kp NUMBER_6>;
-            key-positions = <6 18>; // top row pinky + home pinky (right side)
-            layers = <0>;
-        };
-
-        combo_num7 {
-            bindings = <&kp N7>;
-            key-positions = <7 19>; // top row ring + home ring
-            layers = <0>;
-        };
-
-        combo_num8 {
-            bindings = <&kp N8>;
-            key-positions = <20 8>; // top row middle + home middle
-            layers = <0>;
-        };
-
-        combo_num9 {
-            bindings = <&kp N9>;
-            key-positions = <9 21>; // top row index + home index
-            layers = <0>;
-        };
-
-        combo_num0 {
-            bindings = <&kp N0>;
-            key-positions = <10 22>; // top row outer + home index (mirrored)
-            layers = <0>;
-        };
-
-        combo_equals {
-            bindings = <&kp EQUAL>;
-            key-positions = <11 23>;
-            layers = <0>;
-        };
-
         combo_f1 {
             bindings = <&kp F1>;
             key-positions = <1 13>;
@@ -291,7 +225,6 @@
             >;
         };
 
-
         mouse_hold {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &mt ENTER LC(LEFT)  &mt ESCAPE LC(RIGHT)
@@ -300,6 +233,5 @@
                         &trans  &trans    &trans    &mkp LCLK       &mkp RCLK       &trans
             >;
         };
-
     };
 };

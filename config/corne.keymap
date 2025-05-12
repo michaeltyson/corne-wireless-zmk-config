@@ -47,9 +47,18 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>; // left side home row key positions
             hold-trigger-on-release;
+        };
+
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+            fire-hold-as-tap;
         };
     };
 
@@ -173,9 +182,9 @@
 
         main {
             bindings = <
-&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P         &kp Y          &kp F                    &kp G            &kp C            &kp R        &kp L          &mt LC(SPACE) BACKSLASH
-&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U   &kp I          &mt LS(LA(LC(LG(T)))) D  &hmr RGUI H      &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &mt LA(LS(MINUS)) MINUS
-&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K         &kp X          &kp B                    &kp M            &kp W            &kp V        &kp Z          &mt LG(BACKSLASH) SLASH
+&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P         &kp Y          &kp F                    &kp G            &kp C            &kp R        &kp L          &ht LC(SPACE) BACKSLASH
+&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U   &kp I          &mt LS(LA(LC(LG(T)))) D  &hmr RGUI H      &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &ht LA(LS(MINUS)) MINUS
+&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K         &kp X          &kp B                    &kp M            &kp W            &kp V        &kp Z          &ht LG(BACKSLASH) SLASH
                                       &kp LGUI             &lt 1 ESCAPE  &lt 2 ENTER    &lt 3 SPACE              &lt 4 BACKSPACE  &kp RIGHT_SHIFT
             >;
         };
@@ -200,7 +209,7 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &mt ENTER LC(LEFT)  &mt ESCAPE LC(RIGHT)
+&trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &ht ENTER LC(LEFT)  &ht ESCAPE LC(RIGHT)
 &trans  &trans  &trans  &trans  &mkp MB1  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LGUI            &kp LC(UP_ARROW)
 &trans  &trans  &trans  &trans  &trans    &trans    &tog 6          &none           &msc SCRL_RIGHT  &msc SCRL_LEFT   &kp LA(LCMD)        &kp LG(F3)
                         &trans  &trans    &trans    &trans          &trans          &trans
@@ -209,9 +218,9 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &mt LG(UP_ARROW) PAGE_UP      &kp LG(LEFT)        &kp UP_ARROW                    &kp LG(RIGHT)  &mt ENTER LC(LG(LEFT_ARROW))  &mt ESCAPE LC(LG(RIGHT))
-&trans  &trans  &trans  &trans  &trans  &trans    &mt LG(DOWN_ARROW) PAGE_DOWN  &kp LEFT            &kp DOWN_ARROW                  &kp RIGHT      &mt LC(LG(Y)) LC(NUMBER_6)    &mt LC(LG(C)) F6
-&trans  &trans  &trans  &trans  &trans  &trans    &mt LA(LG(COMMA)) LC(GRAVE)   &kp LA(LEFT_ARROW)  &mt LC(LG(J)) LC(LG(UP_ARROW))  &kp LA(RIGHT)  &mt LG(LS(C)) LS(LG(O))       &mt F8 F7
+&trans  &trans  &trans  &trans  &trans  &trans    &ht LG(UP_ARROW) PAGE_UP      &kp LG(LEFT)        &kp UP_ARROW                    &kp LG(RIGHT)  &ht ENTER LC(LG(LEFT_ARROW))  &ht ESCAPE LC(LG(RIGHT))
+&trans  &trans  &trans  &trans  &trans  &trans    &ht LG(DOWN_ARROW) PAGE_DOWN  &kp LEFT            &kp DOWN_ARROW                  &kp RIGHT      &ht LC(LG(Y)) LC(NUMBER_6)    &ht LC(LG(C)) F6
+&trans  &trans  &trans  &trans  &trans  &trans    &ht LA(LG(COMMA)) LC(GRAVE)   &kp LA(LEFT_ARROW)  &ht LC(LG(J)) LC(LG(UP_ARROW))  &kp LA(RIGHT)  &ht LG(LS(C)) LS(LG(O))       &ht F8 F7
                         &trans  &trans  &trans    &trans                        &trans              &trans
             >;
         };
@@ -227,7 +236,7 @@
 
         mouse_hold {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &mt ENTER LC(LEFT)  &mt ESCAPE LC(RIGHT)
+&trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &ht ENTER LC(LEFT)  &ht ESCAPE LC(RIGHT)
 &trans  &trans  &trans  &trans  &mkp MB1  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LGUI            &kp LC(UP_ARROW)
 &trans  &trans  &trans  &trans  &trans    &trans    &tog 6          &none           &msc SCRL_RIGHT  &msc SCRL_LEFT   &kp LA(LCMD)        &kp LG(F3)
                         &trans  &trans    &trans    &mkp LCLK       &mkp RCLK       &trans

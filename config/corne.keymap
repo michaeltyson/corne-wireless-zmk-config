@@ -201,7 +201,7 @@
         symbols {
             bindings = <
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &mt PIPE AMPS  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTERISK   &kp CARET         &kp DOLLAR
-&trans  &hml LSHFT N6 &hml LALT N7  &hml LCTRL N8 &hml LGUI N9  &kp N0        &kp AT         &hml LSHFT LEFT_PARENTHESIS &hml LALT RIGHT_PARENTHESIS &hml LEFT_CONTROL LESS_THAN &hml LGUI GREATER_THAN &kp MINUS
+&trans  &hml LSHFT N6 &hml LALT N7  &hml LCTRL N8 &hml LGUI N9  &kp N0        &kp AT         &hmr RGUI LEFT_PARENTHESIS &hmr RCTRL RIGHT_PARENTHESIS &hmr RALT LESS_THAN &hmr RSHIFT GREATER_THAN &kp MINUS
 &trans  &kp PLUS      &kp MINUS     &kp ASTERISK  &kp SLASH     &kp PERIOD    &kp EXCL       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EQUAL      &kp PLUS          &kp HASH
                                     &trans        &trans        &trans        &trans         &kp DELETE            &trans
             >;

@@ -63,6 +63,15 @@
             flavor = "tap-preferred";
             fire-hold-as-tap;
         };
+
+        ltt: layer_tap_tap_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     combos {
@@ -188,7 +197,7 @@
 &kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P         &kp Y          &kp F                    &kp G            &kp C            &kp R        &kp L          &ht LC(SPACE) BACKSLASH
 &kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U   &kp I          &mt LS(LA(LC(LG(T)))) D  &hmr RGUI H      &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &ht LA(LS(MINUS)) MINUS
 &kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K         &kp X          &kp B                    &kp M            &kp W            &kp V        &kp Z          &ht LG(BACKSLASH) SLASH
-                                      &kp LGUI             &lt 1 ESCAPE  &lt 2 ENTER    &lt 3 SPACE              &lt 4 BACKSPACE  &kp RIGHT_SHIFT
+                                      &kp LGUI             &lt 1 ESCAPE  &lt 2 ENTER    &ltt 3 SPACE             &lt 4 BACKSPACE  &kp RIGHT_SHIFT
             >;
         };
 

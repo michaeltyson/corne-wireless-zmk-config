@@ -22,8 +22,8 @@
     flavor = "tap-preferred";
 };
 
-&lt { 
-    quick-tap-ms = <150>; 
+&lt {
+    quick-tap-ms = <150>;
     flavor = "hold-preferred";
 };
 
@@ -50,6 +50,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>; // left side home row key positions
             hold-trigger-on-release;
         };
@@ -58,6 +59,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             tapping-term-ms = <300>;
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
@@ -194,10 +196,10 @@
 
         main {
             bindings = <
-&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P         &kp Y          &kp F                    &kp G            &kp C            &kp R        &kp L          &ht LC(SPACE) BACKSLASH
-&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U   &kp I          &mt LS(LA(LG(D))) D      &hmr RGUI H      &hmr RCTRL T     &hmr RALT N  &hmr RSHIFT S  &ht LA(LS(MINUS)) MINUS
-&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K         &kp X          &kp B                    &kp M            &kp W            &kp V        &kp Z          &ht LG(BACKSLASH) SLASH
-                                      &kp LGUI             &lt 1 ESCAPE  &lt 2 ENTER    &ltt 3 SPACE             &lt 4 BACKSPACE  &kp RIGHT_SHIFT
+&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P         &kp Y          &kp F                &kp G            &kp C         &kp R        &kp L          &ht LC(SPACE) BACKSLASH
+&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U   &kp I          &mt LS(LA(LG(D))) D  &hmr RGUI H      &hmr RCTRL T  &hmr RALT N  &hmr RSHIFT S  &ht LA(LS(MINUS)) MINUS
+&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K         &kp X          &kp B                &kp M            &kp W         &kp V        &kp Z          &ht LG(BACKSLASH) SLASH
+                                      &kp LCMD             &lt 1 ESCAPE  &lt 2 ENTER    &ltt 3 SPACE         &lt 4 BACKSPACE  &kp RCMD
             >;
         };
 
@@ -212,10 +214,10 @@
 
         symbols {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &mt PIPE AMPS  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp ASTERISK   &kp CARET         &kp DOLLAR
-&trans  &hml LSHFT N6 &hml LALT N7  &hml LCTRL N8 &hml LGUI N9  &kp N0        &kp AT         &hmr RGUI LEFT_PARENTHESIS &hmr RCTRL RIGHT_PARENTHESIS &hmr RALT LESS_THAN &hmr RSHIFT GREATER_THAN &kp MINUS
-&trans  &kp PLUS      &kp MINUS     &kp ASTERISK  &kp SLASH     &kp PERIOD    &kp EXCL       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EQUAL      &kp PLUS          &kp HASH
-                                    &trans        &trans        &trans        &trans         &kp DELETE            &trans
+&trans  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp N5        &mt PIPE AMPS  &kp LEFT_BRACE              &kp RIGHT_BRACE               &kp ASTERISK         &kp CARET                 &kp DOLLAR
+&trans  &hml LSHFT N6  &hml LALT N7  &hml LCTRL N8  &hml LGUI N9  &kp N0        &kp AT         &hmr RGUI LEFT_PARENTHESIS  &hmr RCTRL RIGHT_PARENTHESIS  &hmr RALT LESS_THAN  &hmr RSHIFT GREATER_THAN  &kp MINUS
+&trans  &kp PLUS       &kp MINUS     &kp ASTERISK   &kp SLASH     &kp PERIOD    &kp EXCL       &kp LEFT_BRACKET            &kp RIGHT_BRACKET             &kp EQUAL            &kp PLUS                  &kp HASH
+                                     &trans         &trans        &trans        &trans         &kp DELETE                  &trans
             >;
         };
 
@@ -233,7 +235,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &ht LG(UP_ARROW) PAGE_UP      &kp LG(LEFT)        &kp UP_ARROW                    &kp LG(RIGHT)  &ht ENTER LC(LG(LEFT_ARROW))  &ht ESCAPE LC(LG(RIGHT))
 &trans  &trans  &trans  &trans  &trans  &trans    &ht LG(DOWN_ARROW) PAGE_DOWN  &kp LEFT            &kp DOWN_ARROW                  &kp RIGHT      &ht LC(LG(Y)) LC(NUMBER_6)    &ht LC(LG(C)) F6
 &trans  &trans  &trans  &trans  &trans  &trans    &ht LA(LG(COMMA)) LC(GRAVE)   &kp LA(LEFT_ARROW)  &ht LC(LG(J)) LC(LG(UP_ARROW))  &kp LA(RIGHT)  &ht LG(LS(C)) LS(LG(O))       &ht F8 F7
-                        &trans  &trans  &trans    &trans                        &trans              &trans
+                        &trans  &trans  &trans    &trans                        &trans              &kp RSHIFT
             >;
         };
 

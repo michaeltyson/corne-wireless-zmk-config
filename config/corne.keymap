@@ -212,7 +212,7 @@
             bindings = <
 &kp LA(LG(N8))            &kp C_VOL_DN  &kp C_VOLUME_UP  &kp LG(C)   &kp LG(V)         &kp LG(LC(SPACE))    &trans  &trans  &trans  &trans  &trans  &trans
 &kp LS(LC(LG(NUMBER_4)))  &kp C_MUTE    &kp C_PREVIOUS   &kp C_NEXT  &kp C_PLAY_PAUSE  &kp LA(LG(ENTER))    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LA(LC(LCMD))          &trans        &trans           &trans      &trans            &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&kp GLOBE                 &trans        &trans           &trans      &trans            &trans               &trans  &trans  &trans  &trans  &trans  &trans
                                                          &trans      &trans            &trans               &trans  &trans  &trans
             >;
         };

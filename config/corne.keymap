@@ -283,10 +283,10 @@
 
         screenflow {
             bindings = <
-&kp LG(K)  &kp LBKT       &kp RBKT   &kp SEMI  &kp SQT    &kp LG(A)             &trans  &trans  &trans  &trans  &trans  &trans
-&kp T      &kp W          &kp E      &kp I     &kp O      &kp LG(BSPC)          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(Z)  &kp LS(LG(Z))  &kp LA(Z)  &kp LEFT  &kp RIGHT  &kp BSPC              &trans  &trans  &trans  &trans  &trans  &trans
-                                     &kp LGUI  &kp LSHFT  &mt LEFT_ALT SPACE    &trans  &trans  &trans
+&kp LG(K)  &kp LBKT       &kp RBKT   &ht LG(C) SEMI  &ht LG(V) SQT  &kp LG(A)             &trans  &trans  &trans  &trans  &trans  &trans
+&kp T      &kp W          &kp E      &kp I           &kp O          &kp LG(BSPC)          &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(Z)  &kp LS(LG(Z))  &kp LA(Z)  &kp LEFT        &kp RIGHT      &kp BSPC              &trans  &trans  &trans  &trans  &trans  &trans
+                                     &kp LGUI        &kp LSHFT      &mt LEFT_ALT SPACE    &trans  &trans  &trans
             >;
         };
     };

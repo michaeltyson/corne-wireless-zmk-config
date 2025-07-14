@@ -186,6 +186,11 @@
             key-positions = <40 41>;
         };
 
+        combo_space {
+            bindings = <&kp SPACE>;
+            key-positions = <37 38>;
+        };
+
         qwerty_combo {
             bindings = <&tog 7>;
             key-positions = <39 41 40>;

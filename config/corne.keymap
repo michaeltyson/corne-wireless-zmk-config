@@ -188,7 +188,7 @@
 
         qwerty_combo {
             bindings = <&tog 7>;
-            key-positions = <36 37 38>;
+            key-positions = <39 41 40>;
         };
 
         resolve_toggle {
@@ -198,7 +198,7 @@
 
         screenflow_toggle {
             bindings = <&tog 9>;
-            key-positions = <36 37 49>;
+            key-positions = <36 37 38>;
         };
     };
 
@@ -288,10 +288,10 @@
 
         resolve {
             bindings = <
-&kp LG(LBKT)  &kp COMMA      &kp DOT      &ht LG(C) UP     &ht LG(V) DOWN   &kp LG(A)           &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(B)     &kp W          &kp E        &kp I            &kp O            &kp LS(BACKSPACE)         &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(Z)     &kp LS(LG(Z))  &kp LA(X)    &kp LEFT         &kp RIGHT        &kp BACKSPACE             &trans  &trans  &trans  &trans  &trans  &trans
-                                          &kp LGUI         &kp LSHFT        &mt LEFT_ALT SPACE  &trans  &trans  &trans
+&kp LG(LBKT)  &kp COMMA      &kp DOT    &ht LG(C) UP  &ht LG(V) DOWN  &kp LG(A)             &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(B)     &kp W          &kp E      &kp I         &kp O           &kp LS(BACKSPACE)     &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(Z)     &kp LS(LG(Z))  &kp LA(X)  &kp LEFT      &kp RIGHT       &kp BACKSPACE         &trans  &trans  &trans  &trans  &trans  &trans
+                                        &kp LGUI      &kp LSHFT       &mt LEFT_ALT SPACE    &trans  &trans  &trans
             >;
         };
 

@@ -293,10 +293,10 @@
 
         resolve {
             bindings = <
-&kp LG(LBKT)  &kp COMMA      &kp DOT    &ht LG(C) UP  &ht LG(V) DOWN  &kp LG(A)             &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(B)     &kp W          &kp E      &kp I         &kp O           &kp LS(BACKSPACE)     &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(Z)     &kp LS(LG(Z))  &kp LA(X)  &kp LEFT      &kp RIGHT       &kp BACKSPACE         &trans  &trans  &trans  &trans  &trans  &trans
-                                        &kp LGUI      &kp LSHFT       &mt LEFT_ALT SPACE    &trans  &trans  &trans
+&kp LG(S)  &kp COMMA             &kp DOT                &ht LG(C) UP  &ht LG(V) DOWN  &ht LA(Y) LG(A)       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(B)  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp I         &kp O           &kp LS(BACKSPACE)     &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(Z)  &kp LS(LG(Z))         &kp LA(X)              &kp LEFT      &kp RIGHT       &kp BACKSPACE         &trans  &trans  &trans  &trans  &trans  &trans
+                                                        &kp LGUI      &kp LSHFT       &mt LEFT_ALT SPACE    &trans  &trans  &trans
             >;
         };
 

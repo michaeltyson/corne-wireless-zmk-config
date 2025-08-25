@@ -188,10 +188,10 @@
 
         combo_space {
             bindings = <&kp SPACE>;
-            key-positions = <37 38>;
+            key-positions = <37 29>;
         };
 
-        qwerty_combo {
+        qwerty_toggle {
             bindings = <&tog 7>;
             key-positions = <39 41 40>;
         };

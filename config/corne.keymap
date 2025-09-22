@@ -82,103 +82,103 @@
         combo_f1 {
             bindings = <&kp F1>;
             key-positions = <1 13>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f2 {
             bindings = <&kp F2>;
             key-positions = <2 14>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f3 {
             bindings = <&kp F3>;
             key-positions = <3 15>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f4 {
             bindings = <&kp F4>;
             key-positions = <4 16>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f5 {
             bindings = <&kp F5>;
             key-positions = <17 5>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f6 {
             bindings = <&kp F6>;
             key-positions = <6 18>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f7 {
             bindings = <&kp F7>;
             key-positions = <7 19>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f8 {
             bindings = <&kp F8>;
             key-positions = <20 8>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f9 {
             bindings = <&kp F9>;
             key-positions = <9 21>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f10 {
             bindings = <&kp F10>;
             key-positions = <10 22>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f11 {
             bindings = <&kp F11>;
             key-positions = <11 23>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_f12 {
             bindings = <&kp F12>;
             key-positions = <23 35>;
-            layers = <1>;
+            layers = <2>;
         };
 
         combo_vi_prev {
             bindings = <&kp HASH>;
             key-positions = <6 7>;
-            layers = <4>;
+            layers = <5>;
         };
 
         combo_vi_next {
             bindings = <&kp STAR>;
             key-positions = <18 19>;
-            layers = <4>;
+            layers = <5>;
         };
 
         combo_vi_start {
             bindings = <&kp CARET>;
             key-positions = <19 7>;
-            layers = <4>;
+            layers = <5>;
         };
 
         combo_vi_end {
             bindings = <&kp DOLLAR>;
             key-positions = <9 21>;
-            layers = <4>;
+            layers = <5>;
         };
 
         combo_vi_match {
             bindings = <&kp PERCENT>;
             key-positions = <31 30>;
-            layers = <4>;
+            layers = <5>;
         };
 
         combo_fwd_del {
@@ -192,7 +192,7 @@
         };
 
         qwerty_toggle {
-            bindings = <&tog 7>;
+            bindings = <&tog 1>;
             key-positions = <39 41 40>;
         };
 
@@ -211,8 +211,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <5>;
+            if-layers = <2 3>;
+            then-layer = <6>;
         };
     };
 
@@ -224,7 +224,16 @@
 &kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P         &kp Y          &kp F                &kp G            &kp C         &kp R        &kp L          &ht LC(SPACE) BACKSLASH
 &kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U   &kp I          &mt LS(LA(LG(D))) D  &hmr RGUI H      &hmr RCTRL T  &hmr RALT N  &hmr RSHIFT S  &ht LA(LS(MINUS)) MINUS
 &kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K         &kp X          &kp B                &kp M            &kp W         &kp V        &kp Z          &ht LG(BACKSLASH) SLASH
-                                      &kp LCMD             &lt 1 ESCAPE  &lt 2 ENTER    &ltt 3 SPACE         &lt 4 BACKSPACE  &kp RCMD
+                                      &kp LCMD             &lt 2 ESCAPE  &lt 3 ENTER    &ltt 4 SPACE         &lt 5 BACKSPACE  &kp RCMD
+            >;
+        };
+
+        qwerty {
+            bindings = <
+&ht ESCAPE GRAVE  &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y         &kp U            &kp I      &kp O    &kp P     &ht LC(SPACE) BACKSLASH
+&mt LCTRL TAB     &kp A  &kp S  &kp D     &kp F        &kp G          &kp H         &kp J            &kp K      &kp L    &kp SEMI  &ht LA(LS(MINUS)) MINUS
+&kp LSHFT         &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N         &kp M            &kp COMMA  &kp DOT  &kp SQT   &ht LG(BACKSLASH) SLASH
+                                &kp LCMD  &lt 2 ENTER  &lt 3 SPACE    &ltt 4 SPACE  &lt 5 BACKSPACE  &kp RCMD
             >;
         };
 
@@ -250,7 +259,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &ht ENTER LC(LEFT)  &ht ESCAPE LC(RIGHT)
 &trans  &trans  &trans  &trans  &mkp MB1  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LGUI            &kp LC(UP_ARROW)
-&trans  &trans  &trans  &trans  &trans    &trans    &tog 6          &none           &msc SCRL_RIGHT  &msc SCRL_LEFT   &kp LA(LCMD)        &kp LG(F3)
+&trans  &trans  &trans  &trans  &trans    &trans    &tog 7          &none           &msc SCRL_RIGHT  &msc SCRL_LEFT   &kp LA(LCMD)        &kp LG(F3)
                         &trans  &trans    &trans    &trans          &trans          &trans
             >;
         };
@@ -277,17 +286,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans    &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &ht ENTER LC(LEFT)  &ht ESCAPE LC(RIGHT)
 &trans  &trans  &trans  &trans  &mkp MB1  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &kp LGUI            &kp LC(UP_ARROW)
-&trans  &trans  &trans  &trans  &trans    &trans    &tog 6          &none           &msc SCRL_RIGHT  &msc SCRL_LEFT   &kp LA(LCMD)        &kp LG(F3)
+&trans  &trans  &trans  &trans  &trans    &trans    &tog 7          &none           &msc SCRL_RIGHT  &msc SCRL_LEFT   &kp LA(LCMD)        &kp LG(F3)
                         &trans  &trans    &trans    &mkp LCLK       &mkp RCLK       &trans
-            >;
-        };
-
-        qwerty {
-            bindings = <
-&kp GRAVE  &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y         &kp U            &kp I      &kp O    &kp P     &ht LC(SPACE) BACKSLASH
-&kp TAB    &kp A  &kp S  &kp D     &kp F        &kp G          &kp H         &kp J            &kp K      &kp L    &kp SEMI  &ht LA(LS(MINUS)) MINUS
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N         &kp M            &kp COMMA  &kp DOT  &kp SQT   &ht LG(BACKSLASH) SLASH
-                         &kp LCMD  &lt 1 ENTER  &lt 2 SPACE    &ltt 3 SPACE  &lt 4 BACKSPACE  &kp RCMD
             >;
         };
 

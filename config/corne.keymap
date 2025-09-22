@@ -181,11 +181,6 @@
             layers = <5>;
         };
 
-        combo_fwd_del {
-            bindings = <&kp DEL>;
-            key-positions = <40 41>;
-        };
-
         combo_space {
             bindings = <&kp SPACE>;
             key-positions = <37 29>;
@@ -221,10 +216,10 @@
 
         main {
             bindings = <
-&kp GRAVE  &kp SQT       &kp COMMA    &kp DOT              &kp P         &kp Y          &kp F                &kp G            &kp C         &kp R        &kp L          &ht LC(SPACE) BACKSLASH
-&kp TAB    &hml LSHFT A  &hml LALT O  &hml LEFT_CONTROL E  &hml LGUI U   &kp I          &mt LS(LA(LG(D))) D  &hmr RGUI H      &hmr RCTRL T  &hmr RALT N  &hmr RSHIFT S  &ht LA(LS(MINUS)) MINUS
-&kp LSHFT  &kp SEMI      &kp Q        &kp J                &kp K         &kp X          &kp B                &kp M            &kp W         &kp V        &kp Z          &ht LG(BACKSLASH) SLASH
-                                      &kp LCMD             &lt 2 ESCAPE  &lt 3 ENTER    &ltt 4 SPACE         &lt 5 BACKSPACE  &kp RCMD
+&ht ESCAPE GRAVE  &kp SQT       &kp COMMA    &kp DOT       &kp P         &kp Y          &kp F                &kp G            &kp C         &kp R        &kp L          &ht LC(SPACE) BACKSLASH
+&mt LCTRL TAB     &hml LSHFT A  &hml LALT O  &hml LCTRL E  &hml LGUI U   &kp I          &mt LS(LA(LG(D))) D  &hmr RGUI H      &hmr RCTRL T  &hmr RALT N  &hmr RSHIFT S  &ht LA(LS(MINUS)) MINUS
+&kp LSHFT         &kp SEMI      &kp Q        &kp J         &kp K         &kp X          &kp B                &kp M            &kp W         &kp V        &kp Z          &ht LG(BACKSLASH) SLASH
+                                             &kp LCMD      &lt 2 ENTER   &ltt 3 SPACE   &ltt 4 SPACE         &lt 5 BACKSPACE  &mt RCMD DEL
             >;
         };
 
@@ -233,7 +228,7 @@
 &ht ESCAPE GRAVE  &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y         &kp U            &kp I      &kp O    &kp P     &ht LC(SPACE) BACKSLASH
 &mt LCTRL TAB     &kp A  &kp S  &kp D     &kp F        &kp G          &kp H         &kp J            &kp K      &kp L    &kp SEMI  &ht LA(LS(MINUS)) MINUS
 &kp LSHFT         &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N         &kp M            &kp COMMA  &kp DOT  &kp SQT   &ht LG(BACKSLASH) SLASH
-                                &kp LCMD  &lt 2 ENTER  &lt 3 SPACE    &ltt 4 SPACE  &lt 5 BACKSPACE  &kp RCMD
+                                &kp LCMD  &lt 2 ENTER  &ltt 3 SPACE   &ltt 4 SPACE  &lt 5 BACKSPACE  &kp RCMD
             >;
         };
 

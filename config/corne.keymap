@@ -220,12 +220,12 @@
             >;
         };
 
-        qwerty {
+        game {
             bindings = <
 &ht ESCAPE GRAVE  &kp Q  &kp W  &kp E     &kp R        &kp T          &kp Y         &kp U            &kp I      &kp O    &kp P     &ht LC(SPACE) BACKSLASH
-&mt LCTRL TAB     &kp A  &kp S  &kp D     &kp F        &kp G          &kp H         &kp J            &kp K      &kp L    &kp SEMI  &ht LA(LS(MINUS)) MINUS
+&lt 3 TAB         &kp A  &kp S  &kp D     &kp F        &kp G          &kp H         &kp J            &kp K      &kp L    &kp SEMI  &ht LA(LS(MINUS)) MINUS
 &kp LSHFT         &kp Z  &kp X  &kp C     &kp V        &kp B          &kp N         &kp M            &kp COMMA  &kp DOT  &kp SQT   &ht LG(BACKSLASH) SLASH
-                                &kp LCMD  &lt 2 ENTER  &ltt 3 SPACE   &ltt 4 SPACE  &lt 5 BACKSPACE  &kp RCMD
+                                &kp LCMD  &kp LCTRL    &kp SPACE      &ltt 4 SPACE  &lt 5 BACKSPACE  &kp RCMD
             >;
         };
 
